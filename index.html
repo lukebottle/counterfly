@@ -1,0 +1,83 @@
+---
+layout: default
+title: 'Counterfly'
+---
+<div class="flex flex-col gap-40 mob:gap-16">
+ <div class="bg-hero-main bg-cover bg-no-repeat bg-center js-hero">
+    <div class="hero">
+        <div class="flex flex-col col-span-8 gap-4 text-white">
+            <span class="text-pretitle leading-3">Web development service</span>
+            <span class="text-hero">Bespoke website solutions</span>
+            <span class="text-lead">We believe your website should be crafted to show the passion you put into your business</span>
+        </div>
+        <div class="flex flex-col col-span-4 gap-4 backdrop-blur bg-white/50 rounded-md justify-center">
+            <div class="flex flex-col p-4 gap-4 items-center text-red-600">
+                <span class="text-title">Contact us</span>
+                <span class="text-lead">How can we help?</span>
+                <div class="flex flex-col w-full">
+                <div>
+                    <label for="first_name" class="text-p font-semibold">Name:</label>
+                    <input type="text" id="first_name" class="w-full bg-white/50 rounded-sm p-2 text-black" required>
+                </div>
+                <div>
+                    <label for="first_name" class="text-p font-semibold">Email:</label>
+                    <input type="text" id="first_name" class="w-full bg-white/50 rounded-sm p-2 text-black" required>
+                </div>
+                <div>
+                    <label for="first_name" class="text-p font-semibold">Phone:</label>
+                    <input type="text" id="first_name" class="w-full bg-white/50 rounded-sm p-2 text-black" required>
+                </div>
+                <div>
+                    <label for="first_name" class="text-p font-semibold">Message:</label>
+                    <input type="text" id="first_name" class="w-full h-full bg-white/50 rounded-sm p-2 text-black" required>
+                </div>
+                <a href="#_" class="relative px-6 py-3 font-bold group mt-16">
+                    <span class="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-white/50 group-hover:translate-x-0 group-hover:translate-y-0"></span>
+                    <span class="absolute inset-0 w-full h-full border-4 border-white"></span>
+                    <span class="relative">Submit</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+</div>
+<div class="grid-default mob:flex-col-reverse">
+<div class="flex flex-col col-span-7 gap-4">
+<span class="text-title">Success made by you</span>
+<span class="text-lead">Every page tells your story</span>
+<span class="text-p">At Counterfly we work closely with you to develop your perfect website, we know all business have different personalities and we believe this should be the same for your website</span>
+</div>
+
+<div class="flex flex-row col-span-5 relative mob:col-span-7">
+<div class="w-full h-full pattern-dots pattern-tropical-500 pattern-bg-transparent pattern-opacity-60 pattern-size-4 -top-8 -left-8 -z-10 rounded-md absolute mob:hidden"></div>
+<img src="{{site.baseurl}}/assets/images/office-desk-in-window-light.jpg" alt="office-desk-in-window-light.jpg">
+</div>
+</div>
+
+
+<div class="grid-default mob:flex-col-reverse">
+{%- include columns/journey.html -%}    
+</div>
+
+
+<div class="grid-default">
+    <div class="flex flex-col col-span-12 gap-4">
+        <span class="text-pretitle">Our packages</span>
+    <span class="text-title">What do we offer?</span>
+    <span class="text-text">Since we are still only a start-up company we offer two packages. These packages are open to being expanded in the future.</span>
+    </div>
+    {%- include columns/costings.html -%}
+    
+    </div>
+
+    <div class="grid-default">
+        <div class="flex flex-col col-span-12 gap-4 text-center">
+            <span class="text-pretitle">FAQ</span>
+        <span class="text-title">Frequently asked questions</span>
+        </div>
+        {%- include columns/faqs.html 
+        title = "What is a startup?---Will this effect us?---Do we have experience?---What if something goes wrong?---What sort of support is offered post deployment?---What if I need something changed?"
+        text = "it means we are a newly formed business. Even with this in mind, we still aim to give 100% to each project that comes our way---No, we only take on projects that we're capable of seeing through to the finish---Combined we have over five years of working in different ends of development---If something goes wrong with your product we will aim to fix it, if the project is complete we will still offer support---Support is offered within reason. Changes are not free, however, bug fixes are (if they were our fault).---This will cost, however, since the project is already finished, the price will vary based on the scale of the request"
+        -%}
+        </div>
+</div>

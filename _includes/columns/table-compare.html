@@ -1,0 +1,27 @@
+{%- assign row-text = include.row-text | split: '---' -%}
+<div class="col-span-12">
+
+    <div class="relative overflow-x-auto">
+        <table class="w-full text-sm text-left ">
+            <thead class="text-xs  uppercase bg-gray-100  text-gray-400">
+                <tr>
+                    <th scope="col" class="bg-white border-gray-300 border-[1px] border-t-0 border-l-0 border-b-0"></th>
+                    <th scope="col" class="px-6 py-3 bg-green-500 text-white text-subtitle text-center">Counterfly</th>
+                    <th scope="col" class="px-6 py-3 bg-coral-500 text-white text-subtitle text-center">Competitors</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%- for row-text in row-text -%}
+                <tr class="bg-white-800 border-[1px] border-l-0">
+                    <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap text-black text-p font-semibold">{{row-text}}</th>
+                    <td class="px-6 py-4 bg-green-100 items-center border-grey-300 border-r-0 border-[2px]"><div class="justify-center flex fill-green-500">{%- include svgs/tick.svg -%}</div></td>
+                    <td class="px-6 py-4 bg-coral-100 items-center"><div class="justify-center flex fill-coral-500">{%- include svgs/x.svg -%}</div></td>
+                    
+                </tr>
+                {%- endfor -%}
+            </tbody>
+            
+        </table>
+    </div>
+    
+</div>

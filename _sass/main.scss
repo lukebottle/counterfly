@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&family=Space+Grotesk:wght@700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-hero{ 
+  @apply text-9xl font-extrabold text-white mob:text-6xl;
+}
+.text-pretitle{ 
+  @apply text-2xl font-semibold leading-8;   
+}
+.text-title{
+ @apply text-5xl font-bold leading-10;   
+}
+.text-lead{
+  @apply text-3xl font-semibold leading-8;   
+}
+.text-subtitle{
+  @apply text-xl leading-8;   
+}
+.text-p{
+   @apply text-base leading-8;
+}
+.grid-default{
+    @apply grid grid-cols-12 gap-12 mob:grid-cols-1 mob:flex mob:flex-col px-4 w-full mx-auto max-w-[1040px];
+}
+.hero {
+  @apply py-20 grid grid-cols-12 gap-12 mob:grid-cols-1 mob:flex mob:flex-col px-4 w-full mx-auto max-w-[1300px];
+}
+img{
+  @apply w-full h-full rounded-md;
+}
