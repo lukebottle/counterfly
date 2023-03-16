@@ -1,0 +1,61 @@
+---
+layout: default
+title: 'navflow'
+focus: about
+---
+<div class="flex flex-col gap-40 mob:gap-16">
+
+{%- include templates/hero.html 
+    text-pretitle = "Our Mission"
+    text-hero = "About navflow.net"
+    text-lead = "We're a team of experts dedicated to creating custom websites that help businesses thrive."
+-%}
+{%- include template-constructor.html 
+    columns = "text---pattern"
+    span = "10---2"
+    text-pretitle = "Bring your website vision to life with our solutions"
+    text-title = "Tailored Solutions for Your Vision"
+    text-p = "We specialize in offering bespoke website solutions that are tailored to meet the unique needs of each of our clients. Our focus is always on developing websites with the customer's vision in mind, so that we can deliver a final product that truly exceeds their expectations. At our company, we understand that every business is different, and therefore has different requirements when it comes to their website. That's why we take the time to listen to our clients and understand their specific needs, goals, and brand values before we even begin the development process. We believe that by collaborating closely with our clients throughout the entire website development journey, we can create websites that truly reflect their vision and values."
+-%}
+{%- include template-constructor.html 
+    columns = "text---cards"
+    href-link = "SliceOfWeb"
+    span = "4---8"
+    text-layout = "center"
+    text-title = "Our slice of the web"
+    
+    button = "true"
+    button-text = "Learn more!"
+-%}
+    
+{%- include template-constructor.html 
+    columns = "text"
+    template-id = "SliceOfWeb"
+    span = "12"
+    text-layout = "center"
+    text-title = "Get Your Own Slice of the Web and Create a Proud Online Space!"
+    text-p = "Our Slice of the Web' is a title that captures the essence of our new journey as a company. As a new player in the industry, we are looking to work with a diverse range of clients and industries to create unique and tailored website solutions that meet their needs."
+-%}
+
+{%- include template-constructor.html 
+    columns = "text---tool-grid"
+    span = "12---12"
+    card-title = "TailwindCSS---Firebase---Jekyll"
+    text-title = "Tools of Our Trade"
+    text-lead = "Our Proficiencies"
+    text-p = "Presenting a Brief List of Development Kits We Have Familiarity With"
+-%}
+
+
+
+<div class="grid-default">
+        <div class="flex flex-col col-span-12 gap-4 text-center">
+            <span class="text-pretitle">FAQ</span>
+        <span class="text-title">Frequently asked questions</span>
+        </div>
+        {%- include columns/faqs.html 
+        title = "What is a startup?---Will this effect us?---Do we have experience?---What if something goes wrong?---What sort of support is offered post deployment?---What if I need something changed?"
+        text = "it means we are a newly formed business. Even with this in mind, we still aim to give 100% to each project that comes our way---No, we only take on projects that we're capable of seeing through to the finish---Combined we have over five years of working in different ends of development---If something goes wrong with your product we will aim to fix it, if the project is complete we will still offer support---Support is offered within reason. Changes are not free, however, bug fixes are (if they were our fault).---This will cost, however, since the project is already finished, the price will vary based on the scale of the request"
+        -%}
+        </div>
+</div>

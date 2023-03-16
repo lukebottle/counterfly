@@ -1,31 +1,27 @@
-
-
-<div class="flex flex-col items-center col-span-6 gap-4 py-4 text-indigo-700 rounded-sm text-lead">
-<span>BASIC</span>
-<span class="w-full p-10 text-center text-white bg-indigo-500 text-title"><span class="text-lead">£</span>150.00</span>
-<ul class="flex flex-col gap-4 text-p">
-    <li>Five-page website</li>
-    <li>Three banner designs</li>
-    <li>Cross-browser compatibility</li>
-    <li>Money back guarantee</li>
-    <li>Mobile responsive</li>
-</ul>
+<div class="flex flex-col col-span-{{span}} gap-4">
+    <span class="text-pretitle">{{text-pretitle[forloop.index0]}}</span>
+    <span class="text-title">{{text-title[forloop.index0]}}</span>
+    <span class="text-text">{{text-p[forloop.index0]}}</span>
 </div>
+{%- assign list-index = -1 -%}
+{%- assign list-divided = card-list-item.size | divided_by: 2 -%}
+{%- for card-title in card-title -%}
+<div class="relative flex flex-col items-center col-span-6 gap-4 py-4 text-indigo-700 rounded-sm text-lead">
+{%- if forloop.last -%}
+<div class="absolute w-56 h-56 -top-12 -right-12 mob:left-0 pattern-diagonal-lines pattern-gray-300 pattern-bg-transparent pattern-opacity-60 pattern-size-16 -z-20"></div>
+{%- endif -%}
+<span>{{card-title}}</span>
+<span class="w-full p-10 text-center text-white {{bg-options[forloop.index0]}} text-title"><span class="text-lead">£</span>{{card-price[forloop.index0]}}</span>
+<ul class="flex flex-col gap-4 text-p">
+    {%- for list-item in card-list-item limit: {{list-divided}} -%}
+    {%- assign list-index = list-index | plus: 1 -%}
+    <li>{{card-list-item[list-index]}}</li>
+    {%- endfor -%}
+</ul>
+
+</div>
+{%- endfor -%}
 
 
-
-
-<div class="relative flex flex-col items-center col-span-6 gap-4 py-4 text-indigo-700 bg-white rounded-sm text-lead">
-    <span>START-UP</span>
-    <span class="w-full p-10 text-center text-white bg-orange-500 text-title"><span class="text-lead">£</span>300.00</span>
-    <ul class="flex flex-col gap-4 text-p">
-        <li>Ten-page website</li>
-        <li>Six banner designs</li>
-        <li>Cross-browser compatibility</li>
-        <li>Money back guarantee</li>
-        <li>Mobile responsive</li>
-    </ul>
-    <div class="absolute w-56 h-56 -top-12 -right-12 mob:left-0 pattern-diagonal-lines pattern-gray-300 pattern-bg-transparent pattern-opacity-60 pattern-size-16 -z-20"></div>
-    </div>
     
     

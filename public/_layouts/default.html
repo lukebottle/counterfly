@@ -7,15 +7,12 @@
     <link rel="stylesheet" href="assets/css/style.css">
     
   </head>
-  <body class="antialiased text-olive-500 font-montserrat">
-    {%- assign translate = "-translate-y-96" -%}
-    {%- assign duration = "duration-700" -%}
-    {%- include header.html -%}
+  {%- include templates/header.html -%}
+    {%- include pre-content.html -%}
     
     {{ content }}
 
+    {%- include post-content.html -%}
     {%- include footer.html -%}
-
-  </body>
   <script src="assets/js/index.js"></script>
 </html>

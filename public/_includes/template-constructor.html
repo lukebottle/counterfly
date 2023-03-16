@@ -1,0 +1,53 @@
+
+{%- comment -%} text options {%- endcomment -%}
+{%- assign template-id = include.template-id | split: '---' -%}
+{%- assign href-link = include.href-link | split: '---' -%}
+{%- assign text-layout = include.text-layout | split: '---' -%}
+{%- assign button = include.button | split: '---' -%}
+{%- assign button-text = include.button-text | split: '---' -%}
+{%- assign text-hero = include.text-hero | split: '---' -%}
+{%- assign text-pretitle = include.text-pretitle | split: '---' -%}
+{%- assign text-title = include.text-title | split: '---' -%}
+{%- assign text-lead = include.text-lead | split: '---' -%}
+{%- assign text-subtitle = include.text-subtitle | split: '---' -%}
+{%- assign text-p = include.text-p | split: '---' -%}
+{%- assign col-img = include.col-img | split: '---' -%}
+{%- assign step-title = include.step-title | split: '---' -%}
+{%- assign step-text = include.step-text | split: '---' -%}
+
+
+{%- assign card-title = include.card-title | split: '---' -%}
+{%- assign card-price = include.card-price | split: '---' -%}
+{%- assign card-list-item = include.card-list-item | split: '---' -%}
+{%- comment -%} text end {%- endcomment -%}
+
+{%- comment -%} form options {%- endcomment -%}
+{%- assign form-label = include.form-label | split: '---' -%}
+{%- assign form-type = include.form-type | split: '---' -%}
+{%- assign form-name = include.form-name | split: '---' -%}
+{%- comment -%} form end {%- endcomment -%}
+
+{%- comment -%} YAML options {%- endcomment -%}
+{%- comment -%} YAML end {%- endcomment -%}
+
+{%- comment -%} column constructor {%- endcomment -%}
+{%- assign columns = include.columns | split: '---' -%}
+{%- comment -%} column constructor end {%- endcomment -%}
+
+{%- comment -%} template layout {%- endcomment -%}
+{%- assign span = include.span | split: '---' -%}
+{%- comment -%} template end {%- endcomment -%}
+
+{%- assign bg-options = "bg-orange-500---bg-red-500---bg-indigo-500---bg-cream-500" | split: '---' -%}
+<body class="antialiased text-olive-500 font-montserrat">
+
+{%- if columns != "" and columns.size != 0 -%}
+<div id="{{template-id}}" class="relative grid-default">
+{%- for columns in columns -%}
+    {%- include columns/{{columns}}.html -%}
+{%- endfor -%}
+</div>
+{%- endif -%}
+
+
+</body>

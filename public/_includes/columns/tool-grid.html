@@ -1,0 +1,12 @@
+
+<div class="col-span-{{span[forloop.index0]}}">
+    <div class="grid grid-cols-3 gap-4 mob:grid-cols-1">
+        {%- for title in card-title -%}
+        <div class="flex flex-col items-center justify-center w-full h-60 gap-2 p-4 {% if title == 'TailwindCSS' %}bg-blue-200{% endif %}{% if title == 'Firebase' %}bg-red-200{% endif %}{% if title == 'Jekyll' %}bg-orange-200 {% endif %} rounded-md shadow-md">
+            {% if title == 'TailwindCSS' %} <div class="flex justify-center fill-white">{%- include svgs/tailwindcss-icon.svg -%}</div> {% endif %}{% if title == 'Firebase' %} <div class="flex justify-center fill-white">{%- include svgs/firebase-icon.svg -%}</div> {% endif %}{% if title == 'Jekyll' %}  <div class="flex justify-center fill-white">{%- include svgs/jekyll-icon.svg -%}</div> {% endif %}
+        <span class="text-white text-title">{{title}}</span>
+        </div>
+        {%- endfor -%}
+
+    </div>
+    </div>

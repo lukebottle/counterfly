@@ -1,0 +1,20 @@
+{%- if text-layout[forloop.index0] == "" and text-layout[forloop.index0].size == "" -%}
+{%- assign text-layout = "text-start" -%}
+{%- endif -%}
+{%- if text-layout[forloop.index0] == "center" and text-layout[forloop.index0].size != "" -%}
+{%- assign text-layout = "text-center justify-center" -%}
+{%- endif -%}
+<div class="flex flex-col col-span-{{span[forloop.index0]}} {{text-layout}} gap-4">
+    <span class="text-pretitle">{{text-pretitle[forloop.index0]}}</span>
+    <span class="text-title">{{text-title[forloop.index0]}}</span>
+    <span class="text-lead">{{text-lead[forloop.index0]}}</span>
+    <span class="text-p">{{text-p[forloop.index0]}}</span>
+    
+    {%- if button[forloop.index0] == "true" -%}
+    {%- assign href-link = {{href-link[forloop.index0]}} -%}
+    {%- assign template-id = template-id -%}
+    {%- include btns/btn-main-body.html 
+    href-link = href-link
+    -%}
+    {%- endif -%}
+    </div>

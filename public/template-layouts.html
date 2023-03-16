@@ -1,0 +1,42 @@
+---
+layout: default
+title: 'navflow'
+focus: about
+---
+<div class="flex flex-col gap-40 mob:gap-16">
+{%- comment -%} hero {%- endcomment -%}
+{%- include templates/hero.html 
+    text-pretitle = "Templates in a Safe Test Environment"
+    text-hero = "Template layouts"
+    text-lead = "Browse The Complete Collection Here"
+-%}
+{%- comment -%} text---image {%- endcomment -%}
+{%- include template-constructor.html 
+    columns = "text---image"
+    span = "6---6"
+    text-title = "This is a title"
+    text-lead = "this is a lead"
+    text-p = "this is a paragraph"
+-%}
+{%- comment -%} journey {%- endcomment -%}
+{%- include template-constructor.html 
+    columns = "journey"
+    span = "12"
+    text-title = "This is a title"
+    text-lead = "this is a lead"
+    text-p = "this is a paragraph"
+    step-title = "1---2---3---4"
+    step-text = "step text---step text---step text---step text"
+-%}
+
+{%- include template-constructor.html 
+    columns = "costings"
+    span = "12"
+    text-pretitle = "This is a pretitle"
+    text-title = "This is a title"
+    text-p = "This is a paragraph"
+    card-title = "card-title---card-title"    
+    card-price = "000---000"
+    card-list-item = "Five-page website---Three banner designs---Cross-browser compatibility---Money back guarantee---Mobile responsive---Ten-page website---Six banner designs---Cross-browser compatibility---Money back guarantee---Mobile responsive"
+-%}
+</div>

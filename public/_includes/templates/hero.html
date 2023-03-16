@@ -1,0 +1,45 @@
+{%- assign hero-pretitle = include.text-pretitle -%}
+{%- assign hero-title = include.text-hero -%}
+{%- assign hero-lead = include.text-lead -%}
+
+{%- assign form-label = include.form-label | split: '---' -%}
+{%- assign form-type = include.form-type | split: '---' -%}
+{%- assign form-name = include.form-name | split: '---' -%}
+
+{%- if page.focus == "index" -%}
+{%- assign bg-hero = 'bg-hero-main' -%}
+{%- endif -%}
+{%- if page.focus == "about" -%}
+{%- assign bg-hero = 'bg-hero-about' -%}
+{%- endif -%}
+
+<div class="bg-center bg-no-repeat bg-cover {{bg-hero}} js-hero shadow-md">
+    <div class="hero">
+        <div class="flex flex-col col-span-8 gap-4 text-white ">
+            <span class="leading-3 text-pretitle">{{hero-pretitle}}</span>
+            {%- if hero-title == 'About navflow.net' -%}
+            <span class="text-hero">About <span class="font-logo">navflow.net</span> </span>
+            {%- else -%}
+            <span class="text-hero">{{hero-title}}</span>
+            {%- endif -%}
+            <span class="text-lead">{{hero-lead}}</span>
+        </div>
+        {%- if form-label != "" and form-label.size != 0 -%}
+        <form action="https://formspree.io/f/mleklzzz" method="POST" class="flex flex-col justify-center col-span-4 gap-4 rounded-md backdrop-blur bg-white/50">
+            <div class="flex flex-col items-center gap-4 p-4 text-red-600">
+                <span class="text-title">Contact us</span>
+                <span class="text-lead">How can we help?</span>
+                <div class="flex flex-col w-full">
+                {%- for form-label in form-label -%}
+                <div>
+                    <label for="first_name" class="font-semibold text-p">{{form-label}}</label>
+                    <input type="{% if form-label == 'Phone' %}number{% elsif form-label == 'Email' %}email{% else %}text{% endif %}" name="{{form-label}}" class="w-full p-2 text-black rounded-sm bg-white/50" required>
+                </div>
+                {%- endfor -%}
+                {%- include btns/btn-main-form.html -%}
+                </div>
+            </div>
+        </form>
+        {%- endif -%}
+        </div>
+    </div>

@@ -97,6 +97,7 @@ module.exports = {
       },
       backgroundImage:{
         'hero-main': "url('../images/mesh-gradient.png')",
+        'hero-about': "url('../images/mesh-gradient-about.png')",
       }
     },
   },
