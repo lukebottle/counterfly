@@ -3,7 +3,7 @@ layout: default
 title: 'navflow'
 focus: index
 ---
-<div class="flex flex-col gap-40 mob:gap-16">
+<div class="flex flex-col bg-page">
 
 {%- include templates/hero.html 
     text-pretitle = "Web development service"
@@ -12,7 +12,12 @@ focus: index
     form-label = "Name---Email---Phone---Message"
     btn = "main"
 -%}
+
    
+
+
+
+
 {%- include template-constructor.html 
     columns = "text---image"
     span = "7---5"
@@ -37,11 +42,35 @@ focus: index
     text-pretitle = "Our packages"
     text-title = "What do we offer?"
     text-p = "Since we are still only a start-up company we offer two packages. These packages are open to being expanded in the future."
-    card-title = "BASIC---START-UP"    
-    card-price = "150---300"
-    card-list-item = "Five-page website---Three banner designs---Cross-browser compatibility---Money back guarantee---Mobile responsive---Ten-page website---Six banner designs---Cross-browser compatibility---Money back guarantee---Mobile responsive"
+    card-title = "NON-PRODUCTION---BASIC---BASIC PLUS"    
+    card-price = "0---150---300"
+    card-list-item = "Two page website---Two banner designs---Cross-browser compatibility---Comprehensive guides for running locally---Mobile responsive---Five-page website---Three banner designs---Cross-browser compatibility---Money back guarantee---Mobile responsive---Ten-page website---Six banner designs---Cross-browser compatibility---Money back guarantee---Mobile responsive"
 -%}
+<div class="bg-cream-100 border-t-[2px] border-red-500">
+<div class="py-20 mob:py-10">
+<div class="grid-default">
+<div class="col-span-12">
+<div class="flex w-full h-full border-blac rounded-md border-black p-4 border-[4px] flex-col gap-8">
+<span class="text-lead">Decoding Our Pricing: Your Guide to Transparent Costs</span>
+<span class="bg-red-500 rounded-md line "></span>
+<div class="flex flex-col gap-2">
+<span class="font-semibold text-subtitle">Non-production:</span>
+<span class="text-p">Our package offers an ideal solution for those seeking to create a website that is not intended for selling products. It's worth noting that we do provide a plan that caters to small businesses who do not anticipate making significant changes to their website after deployment. However, we would like to inform you that any modifications made post-deployment may incur additional charges. We are committed to providing exceptional service and ensuring that your website accurately reflects your business's goals and values.</span>
+</div>
+<div class="flex flex-col gap-2">
+    <span class="font-semibold text-subtitle">Basic:</span>
+    <span class="text-p">Our package has been thoughtfully crafted for start-up companies or businesses seeking a web presence without being overly dependent on it. With this package, we will set up hosting and design and develop a website tailored to your business needs. Our team is committed to ensuring that your website is designed with your brand in mind, so you can effectively communicate your unique value proposition to your audience. We strive to provide exceptional service and support, so you can focus on growing your business while we handle the technical details of your website. </span>
+    </div>
+<div class="flex flex-col gap-2">
+        <span class="font-semibold text-subtitle">Basic plus:</span>
+        <span class="text-p">This package builds upon the features offered in the basic package, providing you with even greater flexibility and the ability to make additional changes during the project's development. We understand that every business has unique needs, and this package offers the versatility required to accommodate those needs. We believe that more is always better, and we are committed to delivering a product that exceeds your expectations. With this package, you can rest assured that you will receive the highest quality service and support, ensuring that your website is a true reflection of your business.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
+    <div class="py-20 mob:py-10">
     <div class="grid-default">
         <div class="flex flex-col col-span-12 gap-4 text-center">
             <span class="text-pretitle">FAQ</span>
@@ -52,4 +81,6 @@ focus: index
         text = "it means we are a newly formed business. Even with this in mind, we still aim to give 100% to each project that comes our way---No, we only take on projects that we're capable of seeing through to the finish---Combined we have over five years of working in different ends of development---If something goes wrong with your product we will aim to fix it, if the project is complete we will still offer support---Support is offered within reason. Changes are not free, however, bug fixes are (if they were our fault).---This will cost, however, since the project is already finished, the price will vary based on the scale of the request"
         -%}
         </div>
+    </div>
+</div>
 </div>

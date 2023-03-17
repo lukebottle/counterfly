@@ -42,12 +42,11 @@
 <body class="antialiased text-olive-500 font-montserrat">
 
 {%- if columns != "" and columns.size != 0 -%}
-<div id="{{template-id}}" class="relative grid-default">
+<div id="{{template-id}}" class="relative py-20 mob:py-10 grid-default">
 {%- for columns in columns -%}
     {%- include columns/{{columns}}.html -%}
 {%- endfor -%}
 </div>
 {%- endif -%}
-
 
 </body>
