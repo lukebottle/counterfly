@@ -98,6 +98,8 @@ module.exports = {
       backgroundImage:{
         'hero-main': "url('../images/mesh-gradient.png')",
         'hero-about': "url('../images/mesh-gradient-about.png')",
+        'hero-footer-block': "url('../images/mesh-gradient-footer.png')",
+        'page': "url('../images/page-bg.webp')",
       }
     },
   },

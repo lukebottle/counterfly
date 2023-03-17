@@ -28,6 +28,10 @@
 .hero {
   @apply py-20 grid grid-cols-12 gap-16 gap-y-8 mob:grid-cols-1 mob:flex mob:flex-col px-4 w-full mx-auto max-w-[1300px];
 }
+.line{
+  @apply max-w-[1040px] mob:px-4 w-full flex flex-col mx-auto h-[2px];
+}
 img{
   @apply w-full h-full rounded-md;
 }
+

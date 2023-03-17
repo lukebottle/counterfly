@@ -1,21 +1,23 @@
+{%- assign bg-options = "bg-orange-500---bg-red-500---bg-indigo-500---bg-cream-500" | split: '---' -%}
+
 <div class="flex flex-col col-span-{{span}} gap-4">
     <span class="text-pretitle">{{text-pretitle[forloop.index0]}}</span>
     <span class="text-title">{{text-title[forloop.index0]}}</span>
     <span class="text-text">{{text-p[forloop.index0]}}</span>
 </div>
-{%- assign list-index = -1 -%}
-{%- assign list-divided = card-list-item.size | divided_by: 2 -%}
+{%- assign list-offset = -5 -%}
 {%- for card-title in card-title -%}
-<div class="relative flex flex-col items-center col-span-6 gap-4 py-4 text-indigo-700 rounded-sm text-lead">
+{%- assign list-offset = list-offset | plus: 5 -%}
+
+<div class="relative z-10 flex flex-col items-center col-span-6 gap-4 py-4 text-indigo-700 rounded-sm text-lead backdrop-blur bg-white/50">
 {%- if forloop.last -%}
-<div class="absolute w-56 h-56 -top-12 -right-12 mob:left-0 pattern-diagonal-lines pattern-gray-300 pattern-bg-transparent pattern-opacity-60 pattern-size-16 -z-20"></div>
+<div class="absolute w-56 h-56 -z-30 -top-12 -right-12 mob:left-0 pattern-diagonal-lines pattern-gray-300 pattern-bg-transparent pattern-opacity-60 pattern-size-16"></div>
 {%- endif -%}
 <span>{{card-title}}</span>
 <span class="w-full p-10 text-center text-white {{bg-options[forloop.index0]}} text-title"><span class="text-lead">£</span>{{card-price[forloop.index0]}}</span>
-<ul class="flex flex-col gap-4 text-p">
-    {%- for list-item in card-list-item limit: {{list-divided}} -%}
-    {%- assign list-index = list-index | plus: 1 -%}
-    <li>{{card-list-item[list-index]}}</li>
+<ul class="flex flex-col gap-4 p-4 text-p">
+    {%- for list-item in card-list-item limit: 5 offset: {{list-offset}} -%}
+    <li>{{list-item}}</li>
     {%- endfor -%}
 </ul>
 
