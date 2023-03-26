@@ -3,6 +3,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.bg-polka { background-image: radial-gradient(#1a1a1a 12.4%, transparent 12.4%); background-position: 24px 24px; background-size: 48px 48px; background-color: #100f0f; }
+
 .text-hero { @apply text-9xl font-extrabold text-white mob:text-6xl; }
 
 .text-pretitle { @apply text-2xl font-semibold leading-8; }
@@ -16,6 +18,8 @@
 .text-p { @apply text-base leading-8; }
 
 .grid-default { @apply grid grid-cols-12 gap-16 gap-y-8 mob:grid-cols-1 mob:flex mob:flex-col px-4 w-full mx-auto max-w-[1040px]; }
+
+.grid-builder { @apply grid grid-cols-12 gap-16 gap-y-8 mob:grid-cols-1 mob:flex mob:flex-col px-4 w-full mx-auto max-w-[1040px]; }
 
 .hero { @apply py-20 grid grid-cols-12 gap-16 gap-y-8 mob:grid-cols-1 mob:flex mob:flex-col px-4 w-full mx-auto max-w-[1300px]; }
 

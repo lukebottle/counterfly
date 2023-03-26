@@ -21,6 +21,17 @@ module.exports = {
           800: "#612d24",
           900: "#301612"
         },
+        purple: {
+          100: "#ebddff",
+          200: "#d8baff",
+          300: "#c498ff",
+          400: "#b175ff",
+          500: "#9d53ff",
+          600: "#7e42cc",
+          700: "#5e3299",
+          800: "#3f2166",
+          900: "#1f1133"
+        },
         green: {
           100: "#e1ebdc",
           200: "#c3d6b8",
@@ -76,6 +87,17 @@ module.exports = {
           800: "#502218",
           900: "#28110c"
 },
+    black: {
+        100: "#d0d0d0",
+        200: "#a1a1a1",
+        300: "#727272",
+        400: "#434343",
+        500: "#1D1D1D",
+        600: "#101010",
+        700: "#0c0c0c",
+        800: "#080808",
+        900: "#040404"
+    },
       },
       screens: {
         // Tiny => @media (min-width: 320px) { ... }
@@ -100,6 +122,7 @@ module.exports = {
         'hero-about': "url('../images/mesh-gradient-about.png')",
         'hero-footer-block': "url('../images/mesh-gradient-footer.png')",
         'page': "url('../images/page-bg.webp')",
+        'grid': "url('../images/grid.png')",
       }
     },
   },
